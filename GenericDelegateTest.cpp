@@ -29,10 +29,8 @@ class Information
         std::string mStrVal;
 };
 
-// Forward declaration
-class GenericBaseObj;
 // this typedef should match to function signature of what it will be used to call. This could be a different class then the one performing the callback.
-typedef Help::GenericDelegate<const boost::shared_ptr<Information>&> GenericMethodDelegate;
+typedef Help::GenericDelegate<const boost::shared_ptr<Information>& > GenericMethodDelegate;
 
 class GenericBaseObj
 {

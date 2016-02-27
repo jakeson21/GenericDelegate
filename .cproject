@@ -44,12 +44,12 @@
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="GenericDelegateTest.null.1722201904" name="GenericDelegateTest"/>
+		<project id="GenericDelegate.null.1722201904" name="GenericDelegate"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Default">
-			<resource resourceType="PROJECT" workspacePath="/GenericDelegateTest"/>
+			<resource resourceType="PROJECT" workspacePath="/GenericDelegate"/>
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
