@@ -76,8 +76,8 @@ class MainContainer
 {
     public:
         MainContainer()
-        : mBaseObj(),
-          mMethodCallback(this, &MainContainer::callbackFunction)
+        : mMethodCallback(this, &MainContainer::callbackFunction),
+          mBaseObj(mMethodCallback, -1.0)
         {}
 
         virtual ~MainContainer()
@@ -88,8 +88,7 @@ class MainContainer
         void start()
         {
             std::cout << "MainContainer.start()" << std::endl;
-            mBaseObj.reset(new GenericBaseObj(mMethodCallback, -1.0));
-            mBaseObj->start();
+            mBaseObj.start();
         }
 
         virtual void callbackFunction(const boost::shared_ptr<Information>& inParm)
@@ -97,9 +96,9 @@ class MainContainer
             std::cout << "Callback was called with " << inParm->toString() << std::endl;
         }
     private:
-        boost::shared_ptr<GenericBaseObj> mBaseObj;
         /// Delegate to callback method
         GenericMethodDelegate mMethodCallback;
+        GenericBaseObj mBaseObj;
 };
 
 int main(void) {

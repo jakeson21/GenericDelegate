@@ -23,7 +23,7 @@ $(EXECUTABLE): $(EXECUTABLE).o
 	$(CC) $^ $(LDFLAGS) -o $@ $(LIBS)
 
 $(EXECUTABLE).o: $(EXECUTABLE).cpp $(HEADERS)
-	$(CC) $(CXXFLAGS) $^
+	$(CC) $(CXXFLAGS) $(EXECUTABLE).cpp
 	
 debug: CXXFLAGS=$(DEBUG)
 debug: all
